@@ -10,13 +10,13 @@ images:
 - name: quay.io/confidential-containers/container-engine-for-cc-payload
   newTag: 1def978fdf6b0cb2383d43970c3dc484df3cad54
 - name: quay.io/confidential-containers/runtime-payload
-  newName: quay.io/confidential-containers/runtime-payload
-  newTag: kata-containers-b91337afef54d94e7f6458a0d1548e921dab6ea0-x86_64
+  newName: jepiococo.azurecr.io/confidential-containers/runtime-payload
+  newTag: kata-containers-a3fc70adb9b14092ee4e49047a79e306483608a2-x86_64
 
 patches:
 - patch: |-
     - op: replace
       path: /spec/config/runtimeClassNames
-      value: ["kata", "kata-clh", "kata-clh-tdx", "kata-qemu", "kata-qemu-tdx", "kata-qemu-sev"]
+      value: ["kata", "kata-clh", "kata-clh-tdx", "kata-qemu", "kata-qemu-tdx", "kata-qemu-sev", "kata-qemu-sev-snp"]
   target:
     kind: CcRuntime
