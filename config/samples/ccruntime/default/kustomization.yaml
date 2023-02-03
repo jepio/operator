@@ -11,12 +11,12 @@ images:
   newTag: 1def978fdf6b0cb2383d43970c3dc484df3cad54
 - name: quay.io/confidential-containers/runtime-payload
   newName: jepiococo.azurecr.io/confidential-containers/runtime-payload
-  newTag: kata-containers-a3fc70adb9b14092ee4e49047a79e306483608a2-x86_64
+  newTag: kata-containers-cae9ce08ebdf5d9bd29614048afea8298d4de67f-x86_64
 
 patches:
 - patch: |-
     - op: replace
       path: /spec/config/runtimeClassNames
-      value: ["kata", "kata-clh", "kata-clh-tdx", "kata-qemu", "kata-qemu-tdx", "kata-qemu-sev", "kata-qemu-sev-snp"]
+      value: ["kata", "kata-clh", "kata-clh-tdx", "kata-qemu", "kata-qemu-tdx", "kata-qemu-sev", "kata-qemu-snp"]
   target:
     kind: CcRuntime
